@@ -1,4 +1,4 @@
-package com.stiltsofr.pagerating.service;
+package com.stiltsoft.pagerating.service;
 
 import java.util.ArrayList;
 import com.atlassian.bandana.BandanaContext;
@@ -6,8 +6,8 @@ import com.atlassian.bandana.BandanaManager;
 import com.atlassian.confluence.setup.bandana.ConfluenceBandanaContext;
 import com.atlassian.confluence.user.AuthenticatedUserThreadLocal;
 import com.atlassian.spring.container.ContainerManager;
-import com.stiltsofr.pagerating.rest.model.PageRateData;
 import com.stiltsoft.pagerating.entity.Rate;
+import com.stiltsoft.pagerating.rest.model.PageRateData;
 
 public class RateService {
 	private BandanaManager bandanaManager;

@@ -1,4 +1,4 @@
-package com.stiltsofr.pagerating.rest.model;
+package com.stiltsoft.pagerating.rest.model;
 
 public class PageRateData {
 

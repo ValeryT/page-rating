@@ -1,12 +1,12 @@
-package com.stiltsofr.pagerating.rest;
+package com.stiltsoft.pagerating.rest;
 
 import javax.ws.rs.*;
 
 import javax.ws.rs.core.Response;
 
 import com.atlassian.json.jsonorg.JSONObject;
-import com.stiltsofr.pagerating.rest.model.PageRateData;
-import com.stiltsofr.pagerating.service.RateService;
+import com.stiltsoft.pagerating.rest.model.PageRateData;
+import com.stiltsoft.pagerating.service.RateService;
 
 @Path("/")
 public class RateResource {	
