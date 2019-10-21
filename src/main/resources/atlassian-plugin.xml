@@ -1,0 +1,40 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+    
+    <xhtml-macro name="Page Rating" class="com.stiltsoft.pagerating.macro.PageRating" key='pagerating-macro'>
+   			 <description key="pagerating.desc"/>
+    		<category name="formatting"/>
+    		<parameters>
+    			<parameter name="Results" type="boolean" >
+    				true
+    			</parameter>
+    		</parameters>
+	</xhtml-macro>
+	    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="pageRating"/>
+    
+	<rest key="ratepage-rest" path="/ratepage"	version="1.0">
+		<description>Provides the REST resource for the Rate.</description>
+	</rest>
+    
+    <!-- add our web resources -->
+    <web-resource key="pageRating-resources" name="pageRating Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="pageRating.css" location="/css/pageRating.css"/>
+        <resource type="download" name="myfont.css" location="/css/fa-css.css"/>
+        <resource type="download" name="fontawesome-webfont.ttf" location="/fonts/fontawesome-webfont.ttf"/>
+        <resource type="download" name="fontawesome-webfont.woff" location="/fonts/fontawesome-webfont.woff"/>
+        <resource type="download" name="fontawesome-webfont.woff2" location="/fonts/fontawesome-webfont.woff2"/>
+        <resource type="download" name="pageRating.js" location="/js/pageRating.js"/>
+        <resource type="download" name="images/" location="/images"/>       
+		<resource type="velocity" name="template" location="/templates/pagerating.vm"/>		
+        <context>pageRating</context>
+    </web-resource>
+</atlassian-plugin>

@@ -1,0 +1,35 @@
+$webResourceManager.requireResource("stiltsoft.pageRating:pageRating-resources")
+	<script type="text/javascript">
+		var pageRating = ${pageRating};
+		var pageRatingCount = ${pageRatingCount};		
+		var pageUserRating =${pageUserRating};	
+		var pageId = ${pageId};
+	</script>
+
+      <div class="rate-header-rate">Your Rating :</div> 
+      <div class="star-rating__wrap">
+        <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
+      </div>
+     #if($pageRating != '-1')
+	    <div  class="rate-header">Results :</div>  
+	    <div class="star-rating">
+	      <div class="star-rating__wrap_done">
+	        <label class="star-rating__ico_done fa fa-star-o fa-lg" id="lsr5"></label>
+	        <label class="star-rating__ico_done fa fa-star-o fa-lg" id="lsr4"></label>
+	        <label class="star-rating__ico_done fa fa-star-o fa-lg" id="lsr3"></label>
+	        <label class="star-rating__ico_done fa fa-star-o fa-lg" id="lsr2"></label>
+	        <label class="star-rating__ico_done fa fa-star-o fa-lg" id="lsr1"></label>
+	      </div>      
+	      <div class="rate-header"><span id="pageRateCountSpan">${pageRatingCount}</span> result(s)</div> 
+	    </div>
+	   #end
+	   
